@@ -36,7 +36,7 @@ public class Knockback : MonoBehaviour
         
         isHit = true;
         Vector2 direction = new Vector2(transform.position.x - sender.transform.position.x, 0);
-        rb.velocity += new Vector2(direction.x, forceUp) * strength;
+        rb.linearVelocity += new Vector2(direction.x, forceUp) * strength;
 
         StartCoroutine(Reset());
 

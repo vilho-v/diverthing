@@ -76,7 +76,7 @@ public class Harpoon : MonoBehaviour
         rb.sharedMaterial.friction = -1;
 
         //give harpoon drag to further simulate water and less velocity and force
-        rb.drag = 2;
-        rb.angularDrag = 1;
+        rb.linearDamping = 2;
+        rb.angularDamping = 1;
     }
 }

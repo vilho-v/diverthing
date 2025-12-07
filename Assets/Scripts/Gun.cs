@@ -55,7 +55,7 @@ public class Gun : MonoBehaviour
         if(Input.GetKeyUp(KeyCode.Mouse1))
         {
             //restore ordinary values when not Releaseg
-            rb.drag = 1;
+            rb.linearDamping = 1;
             rb.gravityScale = 0.5f;
             //RESTORRE HARPOON VALUE TOO
             if (harpoon != null)
@@ -174,7 +174,7 @@ public class Gun : MonoBehaviour
         rb.gravityScale = 0.001f;
 
         //linear drag prevents obscene speeds from far away tethers
-        rb.drag = currDistance * 1.2f;
+        rb.linearDamping = currDistance * 1.2f;
 
         //apply multipliers for smoother use
         var dir3 = new Vector2(dir2.x*1.5f, dir2.y/1.5f);
